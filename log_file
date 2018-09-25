@@ -1,3 +1,5 @@
+1) command : git diff
+
 diff --git a/A.txt b/A.txt
 index 802992c..e7be6ab 100644
 --- a/A.txt
@@ -5,6 +7,9 @@ index 802992c..e7be6ab 100644
 @@ -1 +1,2 @@
  Hello world
 +I am online
+
+2) command : git diff master..branchone
+
 diff --git a/A.txt b/A.txt
 index e7be6ab..802992c 100644
 --- a/A.txt
@@ -21,9 +26,13 @@ index 101c16a..64f17ca 100644
 +All work and no play makes this a dull month
 
 
+3) Conflict in merging:
 
 <<<<<<< HEAD
 Too long!
 =======
 All work and no play makes this a dull month
 >>>>>>> branchone
+
+Conflict solution: The extra characters in the file B.txt are removed
+in order to successfully merge branchone and master.
